@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ply_84abacce",
+    "name": "Jogador 1",
+    "stars": 0
+  },
+  {
+    "id": "ply_56408f4f",
+    "name": "Jogador 2",
+    "stars": 1
+  },
+  {
+    "id": "ply_2e8f9e43",
+    "name": "Jogador 3",
+    "stars": 2
+  },
+  {
+    "id": "ply_9835b701",
+    "name": "Jogador 4",
+    "stars": 3
+  },
+  {
+    "id": "ply_c03400af",
+    "name": "Jogador 5",
+    "stars": 4
+  },
+  {
+    "id": "ply_09fed353",
+    "name": "Jogador 6",
+    "stars": 5
+  },
+  {
+    "id": "ply_e2a3f8e7",
+    "name": "Jogador 7",
+    "stars": 0
+  },
+  {
+    "id": "ply_2271eab8",
+    "name": "Jogador 8",
+    "stars": 1
+  }
+]

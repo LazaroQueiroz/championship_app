@@ -1,0 +1,1 @@
+"""Championship management application package."""

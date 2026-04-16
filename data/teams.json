@@ -1,0 +1,34 @@
+[
+  {
+    "id": "tm_a65686b9",
+    "name": "Time A",
+    "player_ids": [
+      "ply_84abacce",
+      "ply_56408f4f"
+    ]
+  },
+  {
+    "id": "tm_d67aa94a",
+    "name": "Time B",
+    "player_ids": [
+      "ply_2e8f9e43",
+      "ply_9835b701"
+    ]
+  },
+  {
+    "id": "tm_b58f9848",
+    "name": "Time C",
+    "player_ids": [
+      "ply_c03400af",
+      "ply_09fed353"
+    ]
+  },
+  {
+    "id": "tm_07f51740",
+    "name": "Time D",
+    "player_ids": [
+      "ply_e2a3f8e7",
+      "ply_2271eab8"
+    ]
+  }
+]

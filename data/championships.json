@@ -1,0 +1,168 @@
+[
+  {
+    "id": "chp_ed2aad53",
+    "name": "Teste",
+    "created_at": "2026-04-16T17:33:08",
+    "status": "finished",
+    "config": {
+      "number_of_groups": 2,
+      "match_duration_minutes": 1,
+      "qualifiers_per_group": 1
+    },
+    "team_ids": [
+      "tm_a65686b9",
+      "tm_d67aa94a",
+      "tm_b58f9848",
+      "tm_07f51740"
+    ],
+    "groups": [
+      {
+        "name": "A",
+        "team_ids": [
+          "tm_a65686b9",
+          "tm_b58f9848"
+        ],
+        "match_ids": [
+          "mch_ff3ee699"
+        ],
+        "standings": {
+          "tm_a65686b9": {
+            "team_id": "tm_a65686b9",
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "gf": 1,
+            "ga": 0,
+            "gd": 1,
+            "points": 3
+          },
+          "tm_b58f9848": {
+            "team_id": "tm_b58f9848",
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "gf": 0,
+            "ga": 1,
+            "gd": -1,
+            "points": 0
+          }
+        }
+      },
+      {
+        "name": "B",
+        "team_ids": [
+          "tm_d67aa94a",
+          "tm_07f51740"
+        ],
+        "match_ids": [
+          "mch_d5c4a2ab"
+        ],
+        "standings": {
+          "tm_d67aa94a": {
+            "team_id": "tm_d67aa94a",
+            "played": 1,
+            "wins": 1,
+            "draws": 0,
+            "losses": 0,
+            "gf": 1,
+            "ga": 0,
+            "gd": 1,
+            "points": 3
+          },
+          "tm_07f51740": {
+            "team_id": "tm_07f51740",
+            "played": 1,
+            "wins": 0,
+            "draws": 0,
+            "losses": 1,
+            "gf": 0,
+            "ga": 1,
+            "gd": -1,
+            "points": 0
+          }
+        }
+      }
+    ],
+    "matches": [
+      {
+        "id": "mch_ff3ee699",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a65686b9",
+        "away_team_id": "tm_b58f9848",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_84abacce",
+            "team_id": "tm_a65686b9",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-16T17:33:08",
+        "winner_team_id": null,
+        "schedule_order": 1,
+        "duration_minutes": 1
+      },
+      {
+        "id": "mch_d5c4a2ab",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "B",
+        "home_team_id": "tm_d67aa94a",
+        "away_team_id": "tm_07f51740",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_2e8f9e43",
+            "team_id": "tm_d67aa94a",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-16T17:33:08",
+        "winner_team_id": null,
+        "schedule_order": 2,
+        "duration_minutes": 1
+      },
+      {
+        "id": "mch_c10556d4",
+        "phase": "knockout",
+        "round_name": "Final",
+        "group_name": null,
+        "home_team_id": "tm_a65686b9",
+        "away_team_id": "tm_d67aa94a",
+        "duration_minutes": 1,
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_84abacce",
+            "team_id": "tm_a65686b9",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-16T17:33:08",
+        "winner_team_id": "tm_a65686b9",
+        "schedule_order": 3
+      }
+    ],
+    "knockout": {
+      "rounds": [
+        {
+          "name": "Final",
+          "match_ids": [
+            "mch_c10556d4"
+          ]
+        }
+      ],
+      "champion_team_id": "tm_a65686b9"
+    }
+  }
+]
