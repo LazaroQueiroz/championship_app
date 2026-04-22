@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+import os
 from typing import Any
 
 # Color Palette ANSI Escape Codes
@@ -101,13 +104,26 @@ def _pad_cell(text: str, total_width: int) -> str:
     return text + " " * padding
 
 
+def _term_width() -> int:
+    """Return usable terminal width, capped for readability."""
+    try:
+        return min(os.get_terminal_size().columns, 100)
+    except OSError:
+        return 72
+
+
 def print_header(title: str, character: str = "═", color: str = Colors.CYAN) -> None:
-    """Prints a styled header panel."""
-    width = 60
+    """Prints a styled header panel that adapts to terminal width."""
+    width = _term_width()
     padded = f" {title.upper()} "
+    if len(padded) >= width:
+        # Fallback for very narrow screens
+        print(f"\n{color}{character * width}")
+        print(f"{color}{Colors.BOLD}{title.upper()[:width]}{Colors.RESET}")
+        print(f"{color}{character * width}{Colors.RESET}\n")
+        return
     left_padding = (width - len(padded)) // 2
     right_padding = width - len(padded) - left_padding
-
     print(f"\n{color}{character * width}")
     print(f"{character * left_padding}{Colors.BOLD}{padded}{Colors.RESET}{color}{character * right_padding}")
     print(f"{character * width}{Colors.RESET}\n")
