@@ -25,5 +25,7 @@ class JsonRepository:
             return self.default
 
     def save(self, data: Any) -> None:
-        with self.file_path.open("w", encoding="utf-8") as f:
+        temp_path = self.file_path.with_suffix(".tmp")
+        with temp_path.open("w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
+        temp_path.replace(self.file_path)

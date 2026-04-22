@@ -30,6 +30,11 @@ class ChampionshipService:
                 return c
         return None
 
+    def delete_championship(self, championship_id: str) -> None:
+        champs = self._load()
+        champs = [c for c in champs if c["id"] != championship_id]
+        self._save(champs)
+
     def create_championship(
         self,
         name: str,
@@ -101,7 +106,9 @@ class ChampionshipService:
         championship_id: str,
         match_id: str,
         goals_by_player: list[dict[str, Any]],
-        tiebreak_winner_team_id: str | None = None,
+        penalties_home: int | None = None,
+        penalties_away: int | None = None,
+        penalties_by_player: list[dict[str, Any]] | None = None,
     ) -> dict[str, Any]:
         championships = self._load()
         ch = self._must_find_championship(championships, championship_id)
@@ -117,14 +124,19 @@ class ChampionshipService:
         match["goals_home"] = home_goals
         match["goals_away"] = away_goals
         match["goals_by_player"] = goals_by_player
+        match["penalties_home"] = penalties_home
+        match["penalties_away"] = penalties_away
+        match["penalties_by_player"] = penalties_by_player or []
         match["played_at"] = now_iso()
 
         winner_team_id = None
         if match["phase"] == "knockout":
             if home_goals == away_goals:
-                if tiebreak_winner_team_id not in (match["home_team_id"], match["away_team_id"]):
-                    raise ValueError("No mata-mata, empate exige vencedor de desempate.")
-                winner_team_id = tiebreak_winner_team_id
+                if penalties_home is None or penalties_away is None:
+                    raise ValueError("No mata-mata, empate exige o número de gols de pênalti.")
+                if penalties_home == penalties_away:
+                    raise ValueError("No mata-mata, os gols de pênalti não podem ser iguais.")
+                winner_team_id = match["home_team_id"] if penalties_home > penalties_away else match["away_team_id"]
             else:
                 winner_team_id = match["home_team_id"] if home_goals > away_goals else match["away_team_id"]
             match["winner_team_id"] = winner_team_id
@@ -139,6 +151,74 @@ class ChampionshipService:
 
         self._save(championships)
         return match
+
+    def edit_match_result(
+        self,
+        championship_id: str,
+        match_id: str,
+        goals_by_player: list[dict[str, Any]],
+        penalties_home: int | None = None,
+        penalties_away: int | None = None,
+        penalties_by_player: list[dict[str, Any]] | None = None,
+    ) -> dict[str, Any]:
+        championships = self._load()
+        ch = self._must_find_championship(championships, championship_id)
+        match = self._must_find_match(ch, match_id)
+
+        if not match["is_played"]:
+            raise ValueError("Não é possível editar uma partida que ainda não foi jogada.")
+
+        if match["phase"] == "knockout":
+            current_round_idx = next(
+                (i for i, r in enumerate(ch["knockout"]["rounds"]) if match_id in r["match_ids"]), None
+            )
+            if current_round_idx is not None and current_round_idx < len(ch["knockout"]["rounds"]) - 1:
+                raise ValueError("Inviável editar este jogo: as próximas chaves do mata-mata já foram giradas.")
+
+        home_goals = sum(1 for g in goals_by_player if g["team_id"] == match["home_team_id"])
+        away_goals = sum(1 for g in goals_by_player if g["team_id"] == match["away_team_id"])
+
+        match["goals_home"] = home_goals
+        match["goals_away"] = away_goals
+        match["goals_by_player"] = goals_by_player
+        match["penalties_home"] = penalties_home
+        match["penalties_away"] = penalties_away
+        match["penalties_by_player"] = penalties_by_player or []
+
+        if match["phase"] == "knockout":
+            if home_goals == away_goals:
+                if penalties_home is None or penalties_away is None:
+                    raise ValueError("Empate em mata-mata requer o número de gols de pênalti.")
+                if penalties_home == penalties_away:
+                    raise ValueError("No mata-mata, os gols de pênalti não podem ser iguais.")
+                match["winner_team_id"] = match["home_team_id"] if penalties_home > penalties_away else match["away_team_id"]
+            else:
+                match["winner_team_id"] = match["home_team_id"] if home_goals > away_goals else match["away_team_id"]
+            
+            self._advance_knockout_if_possible(ch)
+            
+        elif match["phase"] == "group":
+            self._recalculate_group_standings(ch)
+
+        self._save(championships)
+        return match
+
+    def delete_match(self, championship_id: str, match_id: str) -> None:
+        championships = self._load()
+        ch = self._must_find_championship(championships, championship_id)
+        match = self._must_find_match(ch, match_id)
+
+        if match["phase"] == "knockout":
+            raise ValueError("Não é permitido excluir partidas de mata-mata. Edite-as se necessário.")
+
+        ch["matches"] = [m for m in ch["matches"] if m["id"] != match_id]
+        
+        for g in ch.get("groups", []):
+            if match_id in g["match_ids"]:
+                g["match_ids"].remove(match_id)
+                
+        self._recalculate_group_standings(ch)
+        self._save(championships)
 
     def create_knockout(self, championship_id: str, qualifiers_per_group: int) -> dict[str, Any]:
         championships = self._load()
@@ -156,14 +236,28 @@ class ChampionshipService:
         full_size = 2 ** ceil(log2(len(qualifiers)))
         byes = full_size - len(qualifiers)
 
-        seeds = qualifiers[:]
-        first_round_teams = seeds + [None] * byes
+        seeds = qualifiers[:] + [None] * byes
 
+        # Gerar posições da chave no formato tradicional de mata-mata
+        def generate_bracket(n: int) -> list[int]:
+            if n <= 1:
+                return [1]
+            matches = [1, 2]
+            for _ in range(1, int(log2(n))):
+                next_matches = []
+                length = len(matches) * 2
+                for seed in matches:
+                    next_matches.append(seed)
+                    next_matches.append(length + 1 - seed)
+                matches = next_matches
+            return matches
+
+        bracket_positions = generate_bracket(full_size)
         pairings = []
-        while first_round_teams:
-            top = first_round_teams.pop(0)
-            bottom = first_round_teams.pop(-1)
-            pairings.append((top, bottom))
+        for i in range(0, full_size, 2):
+            top_seed_idx = bracket_positions[i] - 1
+            bot_seed_idx = bracket_positions[i+1] - 1
+            pairings.append((seeds[top_seed_idx], seeds[bot_seed_idx]))
 
         first_round_name = self._round_name(len(pairings) * 2)
         round_matches = []
@@ -238,28 +332,62 @@ class ChampionshipService:
         return matches
 
     def _reorder_matches_no_consecutive_teams(self, matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        pending = matches[:]
-        ordered = []
+        """Schedule matches so that no team plays in two consecutive slots
+        and the gap between a team's successive matches is as large as possible.
 
-        while pending:
-            if not ordered:
-                ordered.append(pending.pop(0))
-                continue
+        Algorithm:
+        - Maintain a dict tracking the last slot index each team appeared in.
+        - At each step, score every remaining match by computing the minimum
+          distance (in slots) since either of its teams last played.
+          A team that hasn't played yet gets distance = infinity.
+        - Pick the match with the largest minimum distance (i.e., the match
+          whose most-recently-seen team is furthest back).
+        - Ties are broken by preferring matches whose teams have played
+          the fewest total matches so far (keeps workload even).
+        """
+        if not matches:
+            return []
 
-            last = ordered[-1]
-            forbidden = {last["home_team_id"], last["away_team_id"]}
-            idx = next(
-                (
-                    i
-                    for i, m in enumerate(pending)
-                    if m["home_team_id"] not in forbidden and m["away_team_id"] not in forbidden
-                ),
-                None,
-            )
-            if idx is None:
-                ordered.append(pending.pop(0))
-            else:
-                ordered.append(pending.pop(idx))
+        pending = list(range(len(matches)))
+        ordered: list[dict[str, Any]] = []
+
+        last_slot: dict[str, int] = {}       # team_id -> last slot index they appeared in
+        play_count: dict[str, int] = {}      # team_id -> number of matches scheduled so far
+
+        for slot in range(len(matches)):
+            best_idx = None
+            best_min_dist = -1
+            best_total_plays = float('inf')
+
+            for pi in pending:
+                m = matches[pi]
+                h = m["home_team_id"]
+                a = m["away_team_id"]
+
+                dist_h = (slot - last_slot[h]) if h in last_slot else float('inf')
+                dist_a = (slot - last_slot[a]) if a in last_slot else float('inf')
+                min_dist = min(dist_h, dist_a)
+
+                total_plays = play_count.get(h, 0) + play_count.get(a, 0)
+
+                # Primary: maximize minimum distance (avoid consecutive)
+                # Secondary: prefer teams that have played less (balanced workload)
+                if (min_dist > best_min_dist) or (min_dist == best_min_dist and total_plays < best_total_plays):
+                    best_min_dist = min_dist
+                    best_total_plays = total_plays
+                    best_idx = pi
+
+            pending.remove(best_idx)
+            chosen = matches[best_idx]
+            ordered.append(chosen)
+
+            h = chosen["home_team_id"]
+            a = chosen["away_team_id"]
+            last_slot[h] = slot
+            last_slot[a] = slot
+            play_count[h] = play_count.get(h, 0) + 1
+            play_count[a] = play_count.get(a, 0) + 1
+
         return ordered
 
     def _update_group_standings(self, championship: dict[str, Any], match: dict[str, Any]) -> None:
@@ -291,6 +419,15 @@ class ChampionshipService:
             home["points"] += 1
             away["points"] += 1
 
+    def _recalculate_group_standings(self, championship: dict[str, Any]) -> None:
+        for group in championship["groups"]:
+            for standing in group["standings"].values():
+                standing.update({"played": 0, "wins": 0, "draws": 0, "losses": 0, "gf": 0, "ga": 0, "gd": 0, "points": 0})
+                
+        group_matches = [m for m in championship["matches"] if m["phase"] == "group" and m["is_played"]]
+        for match in group_matches:
+            self._update_group_standings(championship, match)
+
     def _all_group_matches_played(self, championship: dict[str, Any]) -> bool:
         group_matches = [m for m in championship["matches"] if m["phase"] == "group"]
         return all(m["is_played"] for m in group_matches)
@@ -312,6 +449,22 @@ class ChampionshipService:
             return 1
         return max(m["schedule_order"] for m in championship["matches"]) + 1
 
+    def update_round_duration(self, championship_id: str, round_name: str, duration: int) -> None:
+        championships = self._load()
+        ch = self._must_find_championship(championships, championship_id)
+        if "knockout" not in ch or not ch["knockout"]["rounds"]:
+            return
+            
+        r = next((r for r in ch["knockout"]["rounds"] if r["name"] == round_name), None)
+        if not r:
+            return
+            
+        for mid in r["match_ids"]:
+            m = self._must_find_match(ch, mid)
+            m["duration_minutes"] = duration
+            
+        self._save(championships)
+
     def _advance_knockout_if_possible(self, championship: dict[str, Any]) -> None:
         rounds = championship["knockout"]["rounds"]
         if not rounds:
@@ -326,6 +479,8 @@ class ChampionshipService:
         if len(winners) == 1:
             championship["status"] = "finished"
             championship["knockout"]["champion_team_id"] = winners[0]
+            # Archive all teams that belonged to this championship.
+            self.team_service.archive_teams_for_championship(championship["id"])
             return
 
         if len(winners) % 2 != 0:

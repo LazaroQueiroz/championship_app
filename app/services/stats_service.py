@@ -64,3 +64,53 @@ class StatsService:
             "goals_by_phase": dict(phase_goals),
             "historical_trend": trend,
         }
+
+    def get_all_players_details(self, championships: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        players = self.player_service.list_players()
+        details = []
+        for p in players:
+            p_id = p["id"]
+            goals = 0
+            goals_by_champ = defaultdict(int)
+            teams_scored_for = set()
+
+            for ch in championships:
+                for match in ch.get("matches", []):
+                    if not match.get("is_played"):
+                        continue
+                    for g in match.get("goals_by_player", []):
+                        if g["player_id"] == p_id:
+                            goals += 1
+                            goals_by_champ[ch["name"]] += 1
+                            teams_scored_for.add(g["team_id"])
+            
+            team_names = []
+            for tid in teams_scored_for:
+                team = self.team_service.get_team(tid)
+                team_names.append(team["name"] if team else tid)
+
+            details.append({
+                "player_id": p_id,
+                "name": p["name"],
+                "stars": p["stars"],
+                "total_goals": goals,
+                "goals_by_championship": dict(goals_by_champ),
+                "teams_scored_for": team_names
+            })
+        
+        return sorted(details, key=lambda x: -x["total_goals"])
+
+    def get_all_matches_details(self, championships: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        all_matches = []
+        for ch in championships:
+            for m in ch.get("matches", []):
+                if not m.get("is_played"):
+                    continue
+                match_info = m.copy()
+                match_info["championship_name"] = ch["name"]
+                all_matches.append(match_info)
+        
+        # Sort by played_at if available, else by schedule_order or something similar
+        all_matches.sort(key=lambda x: x.get("played_at", "") or "", reverse=True)
+        return all_matches
+
