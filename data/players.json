@@ -1,42 +1,127 @@
 [
   {
-    "id": "ply_84abacce",
-    "name": "Jogador 1",
-    "stars": 0
-  },
-  {
-    "id": "ply_56408f4f",
-    "name": "Jogador 2",
-    "stars": 1
-  },
-  {
-    "id": "ply_2e8f9e43",
-    "name": "Jogador 3",
-    "stars": 2
-  },
-  {
-    "id": "ply_9835b701",
-    "name": "Jogador 4",
-    "stars": 3
-  },
-  {
-    "id": "ply_c03400af",
-    "name": "Jogador 5",
-    "stars": 4
-  },
-  {
-    "id": "ply_09fed353",
-    "name": "Jogador 6",
+    "id": "ply_83b177bc",
+    "name": "rafael",
     "stars": 5
   },
   {
-    "id": "ply_e2a3f8e7",
-    "name": "Jogador 7",
-    "stars": 0
+    "id": "ply_d3ae84f9",
+    "name": "fofinho",
+    "stars": 3
   },
   {
-    "id": "ply_2271eab8",
-    "name": "Jogador 8",
-    "stars": 1
+    "id": "ply_ff7194d4",
+    "name": "pietro",
+    "stars": 3.5
+  },
+  {
+    "id": "ply_d523c505",
+    "name": "tarcisio",
+    "stars": 4
+  },
+  {
+    "id": "ply_6bbaed35",
+    "name": "zinho",
+    "stars": 3
+  },
+  {
+    "id": "ply_967c34ff",
+    "name": "venilson",
+    "stars": 5
+  },
+  {
+    "id": "ply_0de8a88d",
+    "name": "abraao",
+    "stars": 3
+  },
+  {
+    "id": "ply_7fecfbf8",
+    "name": "messias",
+    "stars": 4
+  },
+  {
+    "id": "ply_7809b48c",
+    "name": "brunao",
+    "stars": 5
+  },
+  {
+    "id": "ply_b7173e59",
+    "name": "franklin",
+    "stars": 4
+  },
+  {
+    "id": "ply_a7cf312d",
+    "name": "manel",
+    "stars": 3
+  },
+  {
+    "id": "ply_a35087cd",
+    "name": "kayamori",
+    "stars": 3
+  },
+  {
+    "id": "ply_082a59e7",
+    "name": "jardel",
+    "stars": 3.0
+  },
+  {
+    "id": "ply_d9810310",
+    "name": "ponce",
+    "stars": 4.5
+  },
+  {
+    "id": "ply_0f451d55",
+    "name": "caio simples",
+    "stars": 4
+  },
+  {
+    "id": "ply_904f392c",
+    "name": "matteus",
+    "stars": 5.0
+  },
+  {
+    "id": "ply_ee43a3ec",
+    "name": "freitas",
+    "stars": 4.5
+  },
+  {
+    "id": "ply_59e73c72",
+    "name": "araujo",
+    "stars": 5
+  },
+  {
+    "id": "ply_8c07403e",
+    "name": "cascunha",
+    "stars": 3
+  },
+  {
+    "id": "ply_b9e36eff",
+    "name": "davvi",
+    "stars": 4
+  },
+  {
+    "id": "ply_95dc0052",
+    "name": "luis",
+    "stars": 5
+  },
+  {
+    "id": "ply_baa3375e",
+    "name": "cartaxo",
+    "stars": 3
+  },
+  {
+    "id": "ply_d1a2339e",
+    "name": "kadu",
+    "stars": 2.5
+  },
+  {
+    "id": "ply_5d188891",
+    "name": "fabio prof",
+    "stars": 3
+  },
+  {
+    "id": "ply_41bf707d",
+    "name": "fabiano",
+    "stars": 3
   }
 ]

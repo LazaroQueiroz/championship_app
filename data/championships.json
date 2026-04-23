@@ -1,85 +1,97 @@
 [
   {
-    "id": "chp_ed2aad53",
-    "name": "Teste",
-    "created_at": "2026-04-16T17:33:08",
+    "id": "chp_13b6e32b",
+    "name": "Campeonato Teste",
+    "created_at": "2026-04-21T22:19:31",
     "status": "finished",
     "config": {
-      "number_of_groups": 2,
-      "match_duration_minutes": 1,
-      "qualifiers_per_group": 1
+      "number_of_groups": 1,
+      "match_duration_minutes": 7,
+      "qualifiers_per_group": 5
     },
     "team_ids": [
-      "tm_a65686b9",
-      "tm_d67aa94a",
-      "tm_b58f9848",
-      "tm_07f51740"
+      "tm_4e7942d3",
+      "tm_a6dce323",
+      "tm_0b673f79",
+      "tm_3a6f35bb",
+      "tm_6e7508ee"
     ],
     "groups": [
       {
         "name": "A",
         "team_ids": [
-          "tm_a65686b9",
-          "tm_b58f9848"
+          "tm_4e7942d3",
+          "tm_a6dce323",
+          "tm_0b673f79",
+          "tm_3a6f35bb",
+          "tm_6e7508ee"
         ],
         "match_ids": [
-          "mch_ff3ee699"
+          "mch_71b8d7b5",
+          "mch_93e8ec62",
+          "mch_622d5f42",
+          "mch_3dfbd0a1",
+          "mch_2434783b",
+          "mch_fc951a29",
+          "mch_ddd5d1dd",
+          "mch_1f54d74d",
+          "mch_b972926c",
+          "mch_31f4f7db"
         ],
         "standings": {
-          "tm_a65686b9": {
-            "team_id": "tm_a65686b9",
-            "played": 1,
-            "wins": 1,
+          "tm_4e7942d3": {
+            "team_id": "tm_4e7942d3",
+            "played": 4,
+            "wins": 4,
             "draws": 0,
             "losses": 0,
-            "gf": 1,
+            "gf": 5,
             "ga": 0,
-            "gd": 1,
-            "points": 3
+            "gd": 5,
+            "points": 12
           },
-          "tm_b58f9848": {
-            "team_id": "tm_b58f9848",
-            "played": 1,
-            "wins": 0,
+          "tm_a6dce323": {
+            "team_id": "tm_a6dce323",
+            "played": 4,
+            "wins": 3,
             "draws": 0,
             "losses": 1,
-            "gf": 0,
-            "ga": 1,
-            "gd": -1,
-            "points": 0
-          }
-        }
-      },
-      {
-        "name": "B",
-        "team_ids": [
-          "tm_d67aa94a",
-          "tm_07f51740"
-        ],
-        "match_ids": [
-          "mch_d5c4a2ab"
-        ],
-        "standings": {
-          "tm_d67aa94a": {
-            "team_id": "tm_d67aa94a",
-            "played": 1,
+            "gf": 3,
+            "ga": 2,
+            "gd": 1,
+            "points": 9
+          },
+          "tm_0b673f79": {
+            "team_id": "tm_0b673f79",
+            "played": 4,
+            "wins": 2,
+            "draws": 0,
+            "losses": 2,
+            "gf": 2,
+            "ga": 2,
+            "gd": 0,
+            "points": 6
+          },
+          "tm_3a6f35bb": {
+            "team_id": "tm_3a6f35bb",
+            "played": 4,
             "wins": 1,
             "draws": 0,
-            "losses": 0,
+            "losses": 3,
             "gf": 1,
-            "ga": 0,
-            "gd": 1,
+            "ga": 3,
+            "gd": -2,
             "points": 3
           },
-          "tm_07f51740": {
-            "team_id": "tm_07f51740",
-            "played": 1,
+          "tm_6e7508ee": {
+            "team_id": "tm_6e7508ee",
+            "played": 4,
             "wins": 0,
             "draws": 0,
-            "losses": 1,
+            "losses": 4,
             "gf": 0,
-            "ga": 1,
-            "gd": -1,
+            "ga": 4,
+            "gd": -4,
             "points": 0
           }
         }
@@ -87,82 +99,1260 @@
     ],
     "matches": [
       {
-        "id": "mch_ff3ee699",
+        "id": "mch_71b8d7b5",
         "phase": "group",
         "round_name": null,
         "group_name": "A",
-        "home_team_id": "tm_a65686b9",
-        "away_team_id": "tm_b58f9848",
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": "tm_a6dce323",
         "is_played": true,
-        "goals_home": 1,
+        "goals_home": 2,
         "goals_away": 0,
         "goals_by_player": [
           {
-            "player_id": "ply_84abacce",
-            "team_id": "tm_a65686b9",
+            "player_id": "ply_59e73c72",
+            "team_id": "tm_4e7942d3",
+            "minute": 1
+          },
+          {
+            "player_id": "ply_59e73c72",
+            "team_id": "tm_4e7942d3",
             "minute": 1
           }
         ],
-        "played_at": "2026-04-16T17:33:08",
+        "played_at": "2026-04-21T22:20:09",
         "winner_team_id": null,
         "schedule_order": 1,
-        "duration_minutes": 1
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
       },
       {
-        "id": "mch_d5c4a2ab",
+        "id": "mch_1f54d74d",
         "phase": "group",
         "round_name": null,
-        "group_name": "B",
-        "home_team_id": "tm_d67aa94a",
-        "away_team_id": "tm_07f51740",
+        "group_name": "A",
+        "home_team_id": "tm_0b673f79",
+        "away_team_id": "tm_3a6f35bb",
         "is_played": true,
         "goals_home": 1,
         "goals_away": 0,
         "goals_by_player": [
           {
-            "player_id": "ply_2e8f9e43",
-            "team_id": "tm_d67aa94a",
+            "player_id": "ply_a7cf312d",
+            "team_id": "tm_0b673f79",
             "minute": 1
           }
         ],
-        "played_at": "2026-04-16T17:33:08",
+        "played_at": "2026-04-21T22:20:25",
         "winner_team_id": null,
         "schedule_order": 2,
-        "duration_minutes": 1
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
       },
       {
-        "id": "mch_c10556d4",
+        "id": "mch_3dfbd0a1",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": "tm_6e7508ee",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_082a59e7",
+            "team_id": "tm_4e7942d3",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:20:33",
+        "winner_team_id": null,
+        "schedule_order": 3,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_2434783b",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a6dce323",
+        "away_team_id": "tm_0b673f79",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_0de8a88d",
+            "team_id": "tm_a6dce323",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:20:42",
+        "winner_team_id": null,
+        "schedule_order": 4,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_31f4f7db",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_3a6f35bb",
+        "away_team_id": "tm_6e7508ee",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_8c07403e",
+            "team_id": "tm_3a6f35bb",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:20:51",
+        "winner_team_id": null,
+        "schedule_order": 5,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_93e8ec62",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": "tm_0b673f79",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_904f392c",
+            "team_id": "tm_4e7942d3",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:21:00",
+        "winner_team_id": null,
+        "schedule_order": 6,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_fc951a29",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a6dce323",
+        "away_team_id": "tm_3a6f35bb",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_0de8a88d",
+            "team_id": "tm_a6dce323",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:21:12",
+        "winner_team_id": null,
+        "schedule_order": 7,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_b972926c",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_0b673f79",
+        "away_team_id": "tm_6e7508ee",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_83b177bc",
+            "team_id": "tm_0b673f79",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:21:21",
+        "winner_team_id": null,
+        "schedule_order": 8,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_622d5f42",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": "tm_3a6f35bb",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_904f392c",
+            "team_id": "tm_4e7942d3",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:21:30",
+        "winner_team_id": null,
+        "schedule_order": 9,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_ddd5d1dd",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a6dce323",
+        "away_team_id": "tm_6e7508ee",
+        "is_played": true,
+        "goals_home": 1,
+        "goals_away": 0,
+        "goals_by_player": [
+          {
+            "player_id": "ply_b9e36eff",
+            "team_id": "tm_a6dce323",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:21:43",
+        "winner_team_id": null,
+        "schedule_order": 10,
+        "duration_minutes": 7,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_9a3cf696",
+        "phase": "knockout",
+        "round_name": "Quartas de Final",
+        "group_name": null,
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": null,
+        "duration_minutes": 7,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": "2026-04-21T22:22:02",
+        "winner_team_id": "tm_4e7942d3",
+        "schedule_order": 11
+      },
+      {
+        "id": "mch_b0421392",
+        "phase": "knockout",
+        "round_name": "Quartas de Final",
+        "group_name": null,
+        "home_team_id": "tm_3a6f35bb",
+        "away_team_id": "tm_6e7508ee",
+        "duration_minutes": 7,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 2,
+        "goals_by_player": [
+          {
+            "player_id": "ply_6bbaed35",
+            "team_id": "tm_6e7508ee",
+            "minute": 1
+          },
+          {
+            "player_id": "ply_6bbaed35",
+            "team_id": "tm_6e7508ee",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:22:29",
+        "winner_team_id": "tm_6e7508ee",
+        "schedule_order": 12,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_1c9f52a0",
+        "phase": "knockout",
+        "round_name": "Quartas de Final",
+        "group_name": null,
+        "home_team_id": "tm_a6dce323",
+        "away_team_id": null,
+        "duration_minutes": 7,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": "2026-04-21T22:22:02",
+        "winner_team_id": "tm_a6dce323",
+        "schedule_order": 13
+      },
+      {
+        "id": "mch_f24a55f0",
+        "phase": "knockout",
+        "round_name": "Quartas de Final",
+        "group_name": null,
+        "home_team_id": "tm_0b673f79",
+        "away_team_id": null,
+        "duration_minutes": 7,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": "2026-04-21T22:22:02",
+        "winner_team_id": "tm_0b673f79",
+        "schedule_order": 14
+      },
+      {
+        "id": "mch_5427ae31",
+        "phase": "knockout",
+        "round_name": "Semifinal",
+        "group_name": null,
+        "home_team_id": "tm_4e7942d3",
+        "away_team_id": "tm_6e7508ee",
+        "duration_minutes": 10,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 2,
+        "goals_by_player": [
+          {
+            "player_id": "ply_6bbaed35",
+            "team_id": "tm_6e7508ee",
+            "minute": 1
+          },
+          {
+            "player_id": "ply_6bbaed35",
+            "team_id": "tm_6e7508ee",
+            "minute": 1
+          }
+        ],
+        "played_at": "2026-04-21T22:22:50",
+        "winner_team_id": "tm_6e7508ee",
+        "schedule_order": 15,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
+      },
+      {
+        "id": "mch_1b22cb53",
+        "phase": "knockout",
+        "round_name": "Semifinal",
+        "group_name": null,
+        "home_team_id": "tm_a6dce323",
+        "away_team_id": "tm_0b673f79",
+        "duration_minutes": 10,
+        "is_played": true,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": "2026-04-21T22:23:51",
+        "winner_team_id": "tm_a6dce323",
+        "schedule_order": 16,
+        "penalties_home": 2,
+        "penalties_away": 0,
+        "penalties_by_player": [
+          {
+            "player_id": "ply_a7cf312d",
+            "team_id": "tm_0b673f79",
+            "scored": false
+          },
+          {
+            "player_id": "ply_0de8a88d",
+            "team_id": "tm_a6dce323",
+            "scored": true
+          },
+          {
+            "player_id": "ply_0f451d55",
+            "team_id": "tm_a6dce323",
+            "scored": true
+          },
+          {
+            "player_id": "ply_d523c505",
+            "team_id": "tm_0b673f79",
+            "scored": false
+          },
+          {
+            "player_id": "ply_a7cf312d",
+            "team_id": "tm_0b673f79",
+            "scored": false
+          }
+        ]
+      },
+      {
+        "id": "mch_38b2cb4f",
         "phase": "knockout",
         "round_name": "Final",
         "group_name": null,
-        "home_team_id": "tm_a65686b9",
-        "away_team_id": "tm_d67aa94a",
-        "duration_minutes": 1,
+        "home_team_id": "tm_6e7508ee",
+        "away_team_id": "tm_a6dce323",
+        "duration_minutes": 10,
         "is_played": true,
         "goals_home": 1,
         "goals_away": 0,
         "goals_by_player": [
           {
-            "player_id": "ply_84abacce",
-            "team_id": "tm_a65686b9",
+            "player_id": "ply_6bbaed35",
+            "team_id": "tm_6e7508ee",
             "minute": 1
           }
         ],
-        "played_at": "2026-04-16T17:33:08",
-        "winner_team_id": "tm_a65686b9",
-        "schedule_order": 3
+        "played_at": "2026-04-21T22:24:34",
+        "winner_team_id": "tm_6e7508ee",
+        "schedule_order": 17,
+        "penalties_home": null,
+        "penalties_away": null,
+        "penalties_by_player": []
       }
     ],
     "knockout": {
       "rounds": [
         {
+          "name": "Quartas de Final",
+          "match_ids": [
+            "mch_9a3cf696",
+            "mch_b0421392",
+            "mch_1c9f52a0",
+            "mch_f24a55f0"
+          ]
+        },
+        {
+          "name": "Semifinal",
+          "match_ids": [
+            "mch_5427ae31",
+            "mch_1b22cb53"
+          ]
+        },
+        {
           "name": "Final",
           "match_ids": [
-            "mch_c10556d4"
+            "mch_38b2cb4f"
           ]
         }
       ],
-      "champion_team_id": "tm_a65686b9"
+      "champion_team_id": "tm_6e7508ee"
+    }
+  },
+  {
+    "id": "chp_0f135a1d",
+    "name": "Campeonato Teste 2",
+    "created_at": "2026-04-21T22:26:02",
+    "status": "group_stage",
+    "config": {
+      "number_of_groups": 1,
+      "match_duration_minutes": 7,
+      "qualifiers_per_group": null
+    },
+    "team_ids": [
+      "tm_4edd5610",
+      "tm_785d5acd",
+      "tm_b718cc08",
+      "tm_58a63d06",
+      "tm_da28dd2f"
+    ],
+    "groups": [
+      {
+        "name": "A",
+        "team_ids": [
+          "tm_4edd5610",
+          "tm_785d5acd",
+          "tm_b718cc08",
+          "tm_58a63d06",
+          "tm_da28dd2f"
+        ],
+        "match_ids": [
+          "mch_53c231c9",
+          "mch_a7d93bbb",
+          "mch_6a3c2ae5",
+          "mch_56443b1b",
+          "mch_af3fb7a9",
+          "mch_1159dec7",
+          "mch_c305ecd0",
+          "mch_cb0b8ba7",
+          "mch_f86b4cc9",
+          "mch_36f791bb"
+        ],
+        "standings": {
+          "tm_4edd5610": {
+            "team_id": "tm_4edd5610",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_785d5acd": {
+            "team_id": "tm_785d5acd",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_b718cc08": {
+            "team_id": "tm_b718cc08",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_58a63d06": {
+            "team_id": "tm_58a63d06",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_da28dd2f": {
+            "team_id": "tm_da28dd2f",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          }
+        }
+      }
+    ],
+    "matches": [
+      {
+        "id": "mch_53c231c9",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4edd5610",
+        "away_team_id": "tm_785d5acd",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 1,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_cb0b8ba7",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_b718cc08",
+        "away_team_id": "tm_58a63d06",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 2,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_56443b1b",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4edd5610",
+        "away_team_id": "tm_da28dd2f",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 3,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_af3fb7a9",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_785d5acd",
+        "away_team_id": "tm_b718cc08",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 4,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_36f791bb",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_58a63d06",
+        "away_team_id": "tm_da28dd2f",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 5,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_a7d93bbb",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4edd5610",
+        "away_team_id": "tm_b718cc08",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 6,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_1159dec7",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_785d5acd",
+        "away_team_id": "tm_58a63d06",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 7,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_f86b4cc9",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_b718cc08",
+        "away_team_id": "tm_da28dd2f",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 8,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_6a3c2ae5",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_4edd5610",
+        "away_team_id": "tm_58a63d06",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 9,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_c305ecd0",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_785d5acd",
+        "away_team_id": "tm_da28dd2f",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 10,
+        "duration_minutes": 7
+      }
+    ],
+    "knockout": {
+      "rounds": [],
+      "champion_team_id": null
+    }
+  },
+  {
+    "id": "chp_94c9bae9",
+    "name": "Racha dos Ruins - 23/04",
+    "created_at": "2026-04-23T13:45:30",
+    "status": "group_stage",
+    "config": {
+      "number_of_groups": 1,
+      "match_duration_minutes": 7,
+      "qualifiers_per_group": null
+    },
+    "team_ids": [
+      "tm_40acc460",
+      "tm_c012b61c",
+      "tm_289b1dc1",
+      "tm_1da12a25",
+      "tm_018b6ffe"
+    ],
+    "groups": [
+      {
+        "name": "A",
+        "team_ids": [
+          "tm_40acc460",
+          "tm_c012b61c",
+          "tm_289b1dc1",
+          "tm_1da12a25",
+          "tm_018b6ffe"
+        ],
+        "match_ids": [
+          "mch_1a799603",
+          "mch_5fa66159",
+          "mch_f68d2144",
+          "mch_7fbfad02",
+          "mch_a75c1bae",
+          "mch_1fcb1a43",
+          "mch_29ec3c0c",
+          "mch_2f711e90",
+          "mch_b5cbc3fc",
+          "mch_1fc0a25c"
+        ],
+        "standings": {
+          "tm_40acc460": {
+            "team_id": "tm_40acc460",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_c012b61c": {
+            "team_id": "tm_c012b61c",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_289b1dc1": {
+            "team_id": "tm_289b1dc1",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_1da12a25": {
+            "team_id": "tm_1da12a25",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_018b6ffe": {
+            "team_id": "tm_018b6ffe",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          }
+        }
+      }
+    ],
+    "matches": [
+      {
+        "id": "mch_1a799603",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_40acc460",
+        "away_team_id": "tm_c012b61c",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 1,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_2f711e90",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_289b1dc1",
+        "away_team_id": "tm_1da12a25",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 2,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_7fbfad02",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_40acc460",
+        "away_team_id": "tm_018b6ffe",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 3,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_a75c1bae",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_c012b61c",
+        "away_team_id": "tm_289b1dc1",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 4,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_1fc0a25c",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_1da12a25",
+        "away_team_id": "tm_018b6ffe",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 5,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_5fa66159",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_40acc460",
+        "away_team_id": "tm_289b1dc1",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 6,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_1fcb1a43",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_c012b61c",
+        "away_team_id": "tm_1da12a25",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 7,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_b5cbc3fc",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_289b1dc1",
+        "away_team_id": "tm_018b6ffe",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 8,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_f68d2144",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_40acc460",
+        "away_team_id": "tm_1da12a25",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 9,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_29ec3c0c",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_c012b61c",
+        "away_team_id": "tm_018b6ffe",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 10,
+        "duration_minutes": 7
+      }
+    ],
+    "knockout": {
+      "rounds": [],
+      "champion_team_id": null
+    }
+  },
+  {
+    "id": "chp_77da84fb",
+    "name": "Racha dos Ruins - 23/04 (final)",
+    "created_at": "2026-04-23T17:10:25",
+    "status": "group_stage",
+    "config": {
+      "number_of_groups": 1,
+      "match_duration_minutes": 7,
+      "qualifiers_per_group": null
+    },
+    "team_ids": [
+      "tm_a9775b68",
+      "tm_5ccf4b58",
+      "tm_97b1015d",
+      "tm_8d62a440",
+      "tm_69452f0e"
+    ],
+    "groups": [
+      {
+        "name": "A",
+        "team_ids": [
+          "tm_a9775b68",
+          "tm_5ccf4b58",
+          "tm_97b1015d",
+          "tm_8d62a440",
+          "tm_69452f0e"
+        ],
+        "match_ids": [
+          "mch_b68e9dcb",
+          "mch_f8757495",
+          "mch_4250d80a",
+          "mch_7e969941",
+          "mch_f82e5ab5",
+          "mch_c2fc8147",
+          "mch_c63fb9f3",
+          "mch_3b0b967a",
+          "mch_0cae1eea",
+          "mch_ce6d390a"
+        ],
+        "standings": {
+          "tm_a9775b68": {
+            "team_id": "tm_a9775b68",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_5ccf4b58": {
+            "team_id": "tm_5ccf4b58",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_97b1015d": {
+            "team_id": "tm_97b1015d",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_8d62a440": {
+            "team_id": "tm_8d62a440",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          },
+          "tm_69452f0e": {
+            "team_id": "tm_69452f0e",
+            "played": 0,
+            "wins": 0,
+            "draws": 0,
+            "losses": 0,
+            "gf": 0,
+            "ga": 0,
+            "gd": 0,
+            "points": 0
+          }
+        }
+      }
+    ],
+    "matches": [
+      {
+        "id": "mch_b68e9dcb",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a9775b68",
+        "away_team_id": "tm_5ccf4b58",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 1,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_3b0b967a",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_97b1015d",
+        "away_team_id": "tm_8d62a440",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 2,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_7e969941",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a9775b68",
+        "away_team_id": "tm_69452f0e",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 3,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_f82e5ab5",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_5ccf4b58",
+        "away_team_id": "tm_97b1015d",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 4,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_ce6d390a",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_8d62a440",
+        "away_team_id": "tm_69452f0e",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 5,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_f8757495",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a9775b68",
+        "away_team_id": "tm_97b1015d",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 6,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_c2fc8147",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_5ccf4b58",
+        "away_team_id": "tm_8d62a440",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 7,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_0cae1eea",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_97b1015d",
+        "away_team_id": "tm_69452f0e",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 8,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_4250d80a",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_a9775b68",
+        "away_team_id": "tm_8d62a440",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 9,
+        "duration_minutes": 7
+      },
+      {
+        "id": "mch_c63fb9f3",
+        "phase": "group",
+        "round_name": null,
+        "group_name": "A",
+        "home_team_id": "tm_5ccf4b58",
+        "away_team_id": "tm_69452f0e",
+        "is_played": false,
+        "goals_home": 0,
+        "goals_away": 0,
+        "goals_by_player": [],
+        "played_at": null,
+        "winner_team_id": null,
+        "schedule_order": 10,
+        "duration_minutes": 7
+      }
+    ],
+    "knockout": {
+      "rounds": [],
+      "champion_team_id": null
     }
   }
 ]

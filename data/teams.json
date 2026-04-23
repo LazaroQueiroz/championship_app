@@ -1,34 +1,327 @@
 [
   {
-    "id": "tm_a65686b9",
-    "name": "Time A",
+    "id": "tm_4e7942d3",
+    "name": "Time Azul",
     "player_ids": [
-      "ply_84abacce",
-      "ply_56408f4f"
-    ]
+      "ply_59e73c72",
+      "ply_ff7194d4",
+      "ply_904f392c",
+      "ply_082a59e7"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_13b6e32b",
+    "is_archived": true
   },
   {
-    "id": "tm_d67aa94a",
-    "name": "Time B",
+    "id": "tm_a6dce323",
+    "name": "Time Vermelho",
     "player_ids": [
-      "ply_2e8f9e43",
-      "ply_9835b701"
-    ]
+      "ply_967c34ff",
+      "ply_0f451d55",
+      "ply_b9e36eff",
+      "ply_0de8a88d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_13b6e32b",
+    "is_archived": true
   },
   {
-    "id": "tm_b58f9848",
-    "name": "Time C",
+    "id": "tm_0b673f79",
+    "name": "Time Verde",
     "player_ids": [
-      "ply_c03400af",
-      "ply_09fed353"
-    ]
+      "ply_83b177bc",
+      "ply_d523c505",
+      "ply_a7cf312d",
+      "ply_ee43a3ec"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_13b6e32b",
+    "is_archived": true
   },
   {
-    "id": "tm_07f51740",
-    "name": "Time D",
+    "id": "tm_3a6f35bb",
+    "name": "Time Amarelo",
     "player_ids": [
-      "ply_e2a3f8e7",
-      "ply_2271eab8"
-    ]
+      "ply_7809b48c",
+      "ply_b7173e59",
+      "ply_a35087cd",
+      "ply_8c07403e"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_13b6e32b",
+    "is_archived": true
+  },
+  {
+    "id": "tm_6e7508ee",
+    "name": "Time Branco",
+    "player_ids": [
+      "ply_7fecfbf8",
+      "ply_d9810310",
+      "ply_d3ae84f9",
+      "ply_6bbaed35"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_13b6e32b",
+    "is_archived": true
+  },
+  {
+    "id": "tm_4edd5610",
+    "name": "Time Azul",
+    "player_ids": [
+      "ply_59e73c72",
+      "ply_904f392c",
+      "ply_d523c505",
+      "ply_082a59e7"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_0f135a1d",
+    "is_archived": false
+  },
+  {
+    "id": "tm_785d5acd",
+    "name": "Time Vermelho",
+    "player_ids": [
+      "ply_7809b48c",
+      "ply_0f451d55",
+      "ply_7fecfbf8",
+      "ply_a7cf312d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_0f135a1d",
+    "is_archived": false
+  },
+  {
+    "id": "tm_b718cc08",
+    "name": "Time Verde",
+    "player_ids": [
+      "ply_83b177bc",
+      "ply_d9810310",
+      "ply_d3ae84f9",
+      "ply_6bbaed35"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_0f135a1d",
+    "is_archived": false
+  },
+  {
+    "id": "tm_58a63d06",
+    "name": "Time Amarelo",
+    "player_ids": [
+      "ply_967c34ff",
+      "ply_ff7194d4",
+      "ply_0de8a88d",
+      "ply_ee43a3ec"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_0f135a1d",
+    "is_archived": false
+  },
+  {
+    "id": "tm_da28dd2f",
+    "name": "23/04 - Time Davvi",
+    "player_ids": [
+      "ply_b9e36eff",
+      "ply_b7173e59",
+      "ply_8c07403e",
+      "ply_a35087cd"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_0f135a1d",
+    "is_archived": false
+  },
+  {
+    "id": "tm_40acc460",
+    "name": "Time Azul",
+    "player_ids": [
+      "ply_83b177bc",
+      "ply_b7173e59",
+      "ply_d523c505",
+      "ply_082a59e7"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_94c9bae9",
+    "is_archived": false
+  },
+  {
+    "id": "tm_c012b61c",
+    "name": "Time Vermelho",
+    "player_ids": [
+      "ply_59e73c72",
+      "ply_ff7194d4",
+      "ply_7fecfbf8",
+      "ply_a7cf312d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_94c9bae9",
+    "is_archived": false
+  },
+  {
+    "id": "tm_289b1dc1",
+    "name": "Time Verde",
+    "player_ids": [
+      "ply_95dc0052",
+      "ply_0f451d55",
+      "ply_ee43a3ec",
+      "ply_8c07403e"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_94c9bae9",
+    "is_archived": false
+  },
+  {
+    "id": "tm_1da12a25",
+    "name": "Time Amarelo",
+    "player_ids": [
+      "ply_7809b48c",
+      "ply_904f392c",
+      "ply_0de8a88d",
+      "ply_d3ae84f9"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_94c9bae9",
+    "is_archived": false
+  },
+  {
+    "id": "tm_018b6ffe",
+    "name": "Time Branco",
+    "player_ids": [
+      "ply_967c34ff",
+      "ply_d9810310",
+      "ply_a35087cd",
+      "ply_baa3375e"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_94c9bae9",
+    "is_archived": false
+  },
+  {
+    "id": "tm_7b316028",
+    "name": "Time Luis",
+    "player_ids": [
+      "ply_95dc0052",
+      "ply_d523c505",
+      "ply_0f451d55",
+      "ply_082a59e7"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_a18953ef",
+    "is_archived": false
+  },
+  {
+    "id": "tm_a80725b8",
+    "name": "Time Venilson",
+    "player_ids": [
+      "ply_967c34ff",
+      "ply_ff7194d4",
+      "ply_d3ae84f9",
+      "ply_41bf707d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_a18953ef",
+    "is_archived": false
+  },
+  {
+    "id": "tm_25c1fec8",
+    "name": "Time Rafael",
+    "player_ids": [
+      "ply_83b177bc",
+      "ply_b7173e59",
+      "ply_8c07403e",
+      "ply_a35087cd"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_a18953ef",
+    "is_archived": false
+  },
+  {
+    "id": "tm_bcc17aed",
+    "name": "Time Araujo",
+    "player_ids": [
+      "ply_59e73c72",
+      "ply_7fecfbf8",
+      "ply_5d188891",
+      "ply_a7cf312d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_a18953ef",
+    "is_archived": false
+  },
+  {
+    "id": "tm_7740f601",
+    "name": "Time Brunao",
+    "player_ids": [
+      "ply_7809b48c",
+      "ply_d9810310",
+      "ply_0de8a88d",
+      "ply_d1a2339e"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_a18953ef",
+    "is_archived": false
+  },
+  {
+    "id": "tm_a9775b68",
+    "name": "23/04 - Time Luis",
+    "player_ids": [
+      "ply_95dc0052",
+      "ply_d523c505",
+      "ply_ff7194d4",
+      "ply_d1a2339e"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_77da84fb",
+    "is_archived": false
+  },
+  {
+    "id": "tm_5ccf4b58",
+    "name": "23/04 - Time Venilson",
+    "player_ids": [
+      "ply_967c34ff",
+      "ply_0f451d55",
+      "ply_8c07403e",
+      "ply_a7cf312d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_77da84fb",
+    "is_archived": false
+  },
+  {
+    "id": "tm_97b1015d",
+    "name": "23/04 - Time Rafael",
+    "player_ids": [
+      "ply_83b177bc",
+      "ply_7fecfbf8",
+      "ply_082a59e7",
+      "ply_0de8a88d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_77da84fb",
+    "is_archived": false
+  },
+  {
+    "id": "tm_8d62a440",
+    "name": "23/04 - Time Brunao",
+    "player_ids": [
+      "ply_7809b48c",
+      "ply_b7173e59",
+      "ply_5d188891",
+      "ply_41bf707d"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_77da84fb",
+    "is_archived": false
+  },
+  {
+    "id": "tm_69452f0e",
+    "name": "23/04 - Time Araujo",
+    "player_ids": [
+      "ply_59e73c72",
+      "ply_d9810310",
+      "ply_d3ae84f9",
+      "ply_a35087cd"
+    ],
+    "is_draft": true,
+    "championship_id": "chp_77da84fb",
+    "is_archived": false
   }
 ]

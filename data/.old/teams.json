@@ -1,0 +1,52 @@
+[
+  {
+    "id": "tm_26506463",
+    "name": "preto",
+    "player_ids": [
+      "ply_9283148c",
+      "ply_5003fc55",
+      "ply_5e4f938e",
+      "ply_d21b55fa"
+    ]
+  },
+  {
+    "id": "tm_a2276bf2",
+    "name": "branco",
+    "player_ids": [
+      "ply_f627a6af",
+      "ply_b67b907f",
+      "ply_fe543423",
+      "ply_35043ed9"
+    ]
+  },
+  {
+    "id": "tm_2993bb0d",
+    "name": "azul",
+    "player_ids": [
+      "ply_429adaff",
+      "ply_c6dd1a9f",
+      "ply_1b9c39ea",
+      "ply_41133487"
+    ]
+  },
+  {
+    "id": "tm_8516954f",
+    "name": "vermelho",
+    "player_ids": [
+      "ply_846b0705",
+      "ply_ff87e12b",
+      "ply_87e02a3e",
+      "ply_e210b35f"
+    ]
+  },
+  {
+    "id": "tm_d4cbf526",
+    "name": "verde",
+    "player_ids": [
+      "ply_48621560",
+      "ply_c71c2f60",
+      "ply_9f6ad07e",
+      "ply_c67ce487"
+    ]
+  }
+]
